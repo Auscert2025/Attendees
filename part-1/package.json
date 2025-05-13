@@ -1,0 +1,15 @@
+{
+  "name": "part-1",
+  "version": "1.0.0",
+  "description": "Part 1 for Auscert 2025 Turtorial",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,34 @@
+name: Build and Push Part 1 Docker Image
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          push: true
+          file: part-1/Dockerfile
+          tags: |
+            ghcr.io/${{ github.repository_owner }}/part-1:latest
+            ghcr.io/${{ github.repository_owner }}/part-1:${{ github.sha }}
