@@ -30,5 +30,5 @@ jobs:
           push: true
           file: part-1/Dockerfile
           tags: |
-            ghcr.io/${{ github.repository_owner }}/part-1:latest
-            ghcr.io/${{ github.repository_owner }}/part-1:${{ github.sha }}
+            ghcr.io/auscert2025/attendees/part-1:latest
+            ghcr.io/auscert2025/attendees/part-1:${{ github.sha }}
