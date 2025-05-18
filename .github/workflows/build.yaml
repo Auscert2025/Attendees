@@ -11,7 +11,7 @@ permissions:
   packages: write
 
 jobs:
-  build-and-push-part-1:
+  build-and-push:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -40,6 +40,3 @@ jobs:
           tags: |
             ghcr.io/auscert2025/attendees/part-1:latest
             ghcr.io/auscert2025/attendees/part-1:${{ github.sha }}
-
-  build-and-push-part-2:
-    runs-on: ubuntu-latest
