@@ -38,5 +38,5 @@ jobs:
           push: true
           file: Dockerfile
           tags: |
-            ghcr.io/auscert2025/attendees/part-1:latest
-            ghcr.io/auscert2025/attendees/part-1:${{ github.sha }}
+            ghcr.io/auscert2025/attendees/webapp:latest
+            ghcr.io/auscert2025/attendees/webapp:${{ github.sha }}
