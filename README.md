@@ -14,7 +14,7 @@ To deploy this you are going to need the following:
 
 1. Ensure the prerequisites are installed
 
-2. Download the Kubeconfig file from the CTFd link (https://ctfd.quokkahost.com/k8s-auth) to allow your machine to auth with the shared AKS cluster:
+2. Download the Kubeconfig file from the CTFd link (https://ctf.auscert2025.app/k8s-auth) to allow your machine to auth with the shared AKS cluster:
 
 #### Bash
 
