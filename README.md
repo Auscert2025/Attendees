@@ -67,3 +67,5 @@ chmod +x deploy.sh
 ```powershell
 deploy.ps1
 ```
+
+7. You may need to wait up to 5 minutes for DNS to propagate after you have deployed but you should be able to access your app from https://namespacename.auscert2025.app
