@@ -42,7 +42,9 @@ Once you have choosen the script for your platform you need to set your own name
 #### Bash
 
 ```bash
-invoke_envsubst --input "./k8s/deployment.yaml" --output "./k8s/deployment-updated.yaml" --var "NAMESPACE=<namespacenamehere>"
+invoke_envsubst --input "./k8s/deployment.yaml" \ 
+--output "./k8s/deployment-updated.yaml" \
+--var "NAMESPACE=<namespacenamehere>"
 ```
 
 #### Powershell
