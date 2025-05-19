@@ -12,15 +12,31 @@ To deploy this you are going to need the following:
 
 ## Steps
 
-1. Clone the Attendees repo or run the following command
+1. Ensure the prerequisites are installed
+
+2. Download the Kubeconfig file from the CTFd link (https://ctfd.quokkahost.com/k8s-auth) to allow your machine to auth with the shared AKS cluster:
+
+#### Bash
+
+```Bash
+mv /path/to/.kube/config $HOME/.kube/config
+```
+
+#### Powershell
+
+```powershell
+mv "C:\path\to\.kube\config" "$HOME\.kube\config"
+```
+
+3. Clone the Attendees repo or run the following command
 
 `git clone https://github.com/Auscert2025/Attendees.git`
 
-2. Open a command line terminal and change directory to the repo you just downloaded
+4. Open a command line terminal and change directory to the repo you just downloaded
 
 `cd Attendees`
 
-3. Depending which operating system you are using you can choose either the PowerShell or Bash script. Note the PowerShell script works with PowerShell Cross Platform. 
+5. Depending which operating system you are using you can choose either the PowerShell or Bash script. Note the PowerShell script works with PowerShell Cross Platform. 
 Once you have choosen the script for your platform you need to set your own namespace name (make sure it is unique as if it matches someone elses you won't have your own environment):
 
 #### Bash
@@ -37,7 +53,7 @@ Invoke-EnvSubst -InputFile "./k8s/deployment.yaml" -OutputFile "./k8s/deployment
 }
 ```
 
-4. Once you have added your namespace you can run the script using the following:
+6. Once you have added your namespace you can run the script using the following:
 
 #### Bash
 
